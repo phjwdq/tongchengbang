@@ -34,6 +34,7 @@ img{
 	margin: 0 auto; 
 }
 /*头部*/
+
 .header{
 	width: 100%;
 	height: 32px;
@@ -41,48 +42,53 @@ img{
 	background-color: #f6f6f6;
 	border: 1px solid #c7c7c7;
 }
-.header a,.header li{
+.header .headWidth{
+	width: 1200px;
+	height: 32px;
+	margin: 0 auto; 
+	/*border: 1px solid red;*/
+}
+.header .headWidth a,.header li{
 	color: #666666;
 }
-.header a:hover{
+.header .headWidth a:hover{
 	text-decoration: underline;
 }
-
-.header .city{
-	width: 280px;
+.header .headWidth .city{
+	width: 210px;
 	height: 32px;
 	float: left;
 }
-.header .city ul{
+.header .headWidth .city ul{
 	width: 200px;
 	height: 32px;
-	float: right;
+	float: left;
 }
-.header .city ul li{
+.header .headWidth .city ul li{
 	float: left;
 	padding: 0 5px;
 }
-.header .city ul li:nth-child(2){
+.header .headWidth .city ul li:nth-child(2){
 	background: url(../img/1headerLine.png) no-repeat right center;
 }
-.header .list{
-	width: 550px;
+.header .headWidth .list{
+	width: 480px;
 	height: 32px;
 	float: right;
 }
-.header .list ul{
-	width: 700px;
+.header .headWidth .list ul{
+	width: 480px;
 	height: 32px;
 }
-.header .list ul li{
+.header .headWidth .list ul li{
 	padding: 0 10px;
 	float: left;
 	background: url(../img/1headerLine.png) no-repeat right center;
 }
-.header .list ul li:last-child{
+.header .headWidth .list ul li:last-child{
 	background: none;
 }
-.header .list ul li:last-child a{
+.header .headWidth .list ul li:last-child a{
 	color: red;
 }
 /*导航*/
@@ -956,4 +962,8 @@ img{
 .mapSear .mapShop #mapCont{
 	width: 890px;
 	height: 500px;
+}
+.footIframe{
+	height: 275px;
+	width: 100%;
 }

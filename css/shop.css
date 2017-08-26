@@ -1,0 +1,367 @@
+/*头部*/
+.header{
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	background-color: #f6f6f6;
+	border: 1px solid #c7c7c7;
+}
+.header .headWidth{
+	width: 960px;
+	margin: 0 auto; 
+}
+.header .headWidth a,.header .headWidth li{
+	color: #666666;
+}
+.header .headWidth a:hover{
+	text-decoration: underline;
+}
+
+.header .headWidth .city{
+	width: 250px;
+	height: 32px;
+	float: left;
+}
+.header .headWidth .city ul{
+	width: 200px;
+	height: 32px;
+	float: left;
+}
+.header .headWidth .city ul li{
+	float: left;
+	padding: 0 5px;
+}
+.header .headWidth .city ul li:nth-child(2){
+	background: url(../img/1headerLine.png) no-repeat right center;
+}
+.header .headWidth .list{
+	width: 480px;
+	height: 32px;
+	float: right;
+}
+.header .headWidth .list ul{
+	width: 480px;
+	height: 32px;
+}
+.header .headWidth .list ul li{
+	padding: 0 10px;
+	float: left;
+	background: url(../img/1headerLine.png) no-repeat right center;
+}
+.header .headWidth .list ul li:last-child{
+	background: none;
+}
+.header .headWidth .list ul li:last-child a{
+	color: red;
+}
+/*搜索*/
+.shopSear{
+	width: 100%;
+	height: 100px;
+	border-bottom: 4px solid #4bac20;
+}
+.shopSear .sear{
+	height: 100px;
+	width: 960px;
+	margin: 0 auto; 
+	padding: 10px 0 0 0;
+
+}
+.shopSear .sear h1{
+	width: 300px;
+	height: 90px;
+	font-size: 0;
+	float: left;
+	background: url(../img/9shop_03.jpg) no-repeat left center;
+}
+.shopSear .sear .searText{
+	width: 650px;
+	height: 90px;
+	float: right;
+	position: relative;
+}
+.shopSear .sear .searText .listSear{
+	width: 650px;
+	height: 24px;
+	line-height: 24px;
+}
+.shopSear .sear .searText .listSear li{
+	height: 24px;
+	margin:  0 5px 5px 5px;
+	float: left;
+}
+.shopSear .sear .searText .listSear li a{
+	display: block;
+	height: 24px;
+	padding: 0 10px;
+	color: #000;
+}
+.shopSear .sear .searText .listSear li a:hover{
+	background-color: #f2f7fb;
+}
+.shopSear .sear .searText .listSear li:first-child a{
+	background-color: #4bac20;
+	color: #fff;
+}
+.shopSear .sear .searText #iptSear{
+	width: 490px;
+	height: 40px;
+	border: 2px solid #4bac20;
+	font-size: 14px;
+	color: #969696;
+	float: left;
+}
+.shopSear .sear .searText .spanTri{
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-top: 5px solid #4bac20;
+	cursor: pointer;
+	position: absolute;
+	left: 470px;
+	top: 50%;
+}
+.shopSear .sear .searText .spanTri000{
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-bottom: 5px solid #4bac20;
+	cursor: pointer;
+	position: absolute;
+	left: 470px;
+	top: 50%;
+}
+.shopSear .sear .searText button{
+	width: 75px;
+	height: 44px;
+	border: none;
+	background-color: #4bac20;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+}
+.shopSear .sear .searText .iptSear1{
+	width: 490px;
+	height: 225px;
+	border: 1px solid #4bac20;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 70px;
+	display: none;
+}
+.shopSear .sear .searText .iptSear1 ul{
+	width: 490px;
+	height: 225px;
+	font-size: 14px;
+}
+.shopSear .sear .searText .iptSear1 ul li{
+	width: 490px;
+	position: relative;
+}
+.shopSear .sear .searText .iptSear1 ul li span{
+	display: block;
+	width: 16px;
+	height: 16px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	background: url(../img/9shopListSear2.png) center center;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+}
+.shopSear .sear .searText .iptSear1 ul li:first-child span,.shopSear .sear .searText .iptSear1 ul li:nth-child(2) span,.shopSear .sear .searText .iptSear1 ul li:nth-child(3) span{
+	background: url(../img/9shopListSear1.png) center center;
+}
+.shopSear .sear .searText .iptSear1 ul li a{
+	display: block;
+	width: 490px;
+	color: #000;
+	line-height: 28px;
+	text-indent: 30px;
+}
+.shopSear .sear .searText .iptSear1 ul li a:hover{
+	background: #c9c9c9;
+}
+/*店铺名*/
+.shopName{
+	width: 960px;
+	height: 163px;
+	margin: 10px auto; 
+	/*padding: 10px 0;*//*？？？？111*/
+	border: 1px solid #f4f4f4;
+	background: url(../img/9shopName1.png) repeat-x center center;
+}
+.shopName .shopImg{
+	width: 120px;
+	height: 120px;
+	margin: 18px; /*111???*/
+	float: left;
+}
+.shopName .shopInfo{
+	width: 460px;
+	height: 120px;
+	margin-top: 20px;
+	float: left;
+}
+.shopName .shopInfo .shopTitle{
+	width: 460px;
+	height: 24px;
+}
+.shopName .shopInfo .shopTitle h4{
+	width: 105px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 16px;
+	float: left;
+}
+.shopName .shopInfo .shopTitle p{
+	width: 100px;
+	height: 24px;
+	line-height: 24px;
+	float: left;
+}
+.shopName .shopInfo .shopTitle p .imgSp{
+	padding: 5px;
+	background-color: #118855;
+	color: #fff;
+	border-radius: 5px;
+}
+.shopName .shopInfo .shopTitle p .textSp{/*???加了padding*/
+	padding: 2px 10px;
+	cursor: pointer;
+	background: url(../img/9shop_12.jpg) no-repeat center center;
+}
+.shopName .shopInfo .tel{
+	width: 460px;
+	height: 90px;
+	padding: 10px 0 0 0;
+}
+.shopName .shopInfo .tel li{
+	width: 460px;
+	line-height: 26px;
+}
+.shopName .shopInfo .tel li .telSp{
+	display: block;
+	width: 105px;
+	text-indent: 25px;
+	float: left;
+	background: url(../img/9shop_17.jpg) no-repeat 5px center;
+}
+.shopName .shopInfo .tel li .telOpen{
+	display:none;
+}
+.shopName .shopInfo .tel li .phone{
+	color: red;
+}
+.shopName .shopInfo .tel li a:hover{
+	text-decoration: underline;
+}
+.shopName .shopOther{
+	width: 250px;
+	height: 160px;
+	padding: 20px 0 0 0; 
+	float: right;
+}
+.shopName .shopOther ul{
+	width: 250px;
+	height: 130px;
+	padding: 0 20px 0 0; 
+} 
+.shopName .shopOther ul li{
+	width: 230px;
+	line-height: 28px;
+} 
+.shopName .shopOther ul li .shareA{
+	display: block;
+	text-indent: 25px;
+	margin: 0 0 0 15px; 
+	color: #aaaaaa;
+	float: left;
+	background: url(../img/9shop_09.jpg) no-repeat left center;
+}
+.shopName .shopOther ul li .shareA:hover{
+	text-decoration: underline;
+}
+.shopName .shopOther ul .shopRank{
+	text-align: right;
+}
+/*店铺公告*/
+.notice{
+	width: 960px;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 auto;
+	border: 1px solid #f0f0f0;
+	color: #ff0000; 
+}
+.notice p{
+	text-indent: 50px;
+	background: url(../img/9shop_25.jpg) no-repeat 20px center
+}
+.notice span{
+	color: #000;
+	font-weight: bold;
+}
+/*分类列表搜索*/
+.main{
+	width: 960px;
+	margin: 0 auto;
+	/*height: */
+}
+.main .mainLeft{
+	width: 960px;
+	float: left;
+}
+.main .mainLeft .sortList{
+	width: 760px;
+	height: 45px;
+	line-height: 45px;
+	margin: 10px 0; 
+	border-bottom: 1px solid #e6e6e6;
+}
+.main .mainLeft .sortList ul{
+	width: 430px;
+	height: 45px;
+	float: left;
+}
+.main .mainLeft .sortList ul li{
+	width: 90px;
+	height: 45px;
+	float: left;
+	margin: 0 7px;
+}
+.main .mainLeft .sortList ul li a{
+	display: block;
+	width: 90px;
+	height: 45px;
+	color: #666666;
+	font-weight: bold;
+	float: left;
+	margin: 0 14px;
+}
+.main .mainLeft .sortList input{
+	width: 160px;
+	height: 20px;
+	text-indent: 25px;
+	margin: 10px 0 0 0; 
+	float: left;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px 0 0 5px; 
+	background: url(../img/9shopSortList1.png) no-repeat 10px center;
+}
+.main .mainLeft .sortList button{
+	width: 45px;
+	height: 22px;
+	border-radius: 0 5px 5px 0; 
+	border: 1px solid #e6e6e6;
+	margin: 10px 0 0 0; 
+	float: left;
+}
+.AAA{
+	width: 100px;
+	height: 50px;
+	background-color: pink;
+}

@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0; 
 }
+html,body{
+	width: 100%;
+}
 body{
 	font-size: 12px;
 	font-family: Microsoft YaHei,"微软雅黑";
@@ -15,7 +18,7 @@ input,button,a{
 a{
 	text-decoration: none;
 }
-img{
+img,input,button{
 	border: none;
 }
 .clearFix:after{
@@ -24,4 +27,8 @@ img{
 	display: block;
 	height: 0;
 	visibility: hidden;
+}
+.width{
+	width: 1200px;
+	margin: 0 auto; 
 }

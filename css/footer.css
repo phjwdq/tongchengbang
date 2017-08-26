@@ -2,21 +2,26 @@
 	background-color: #fafafa;
 	height: 270px;
 	color: #909090;
+	border-top: 1px solid #e6e6e6; 
 }
 a{
 	color: #909090;
+}
+a:hover{
+	text-decoration: underline;
 }
 .foot .linkIco{
 	width: 990px;
 	height: 130px;
 	margin: 0 auto; 
+	border-bottom: 1px solid #e6e6e6;
 }
 .foot .linkIco .linkText{
 	width: 240px;
 	height: 130px;
 	padding: 20px  0 0 0;
 	float: left;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 .foot .linkIco .linkText .imgP{
 	width: 70px;
@@ -41,4 +46,19 @@ a{
 }
 .foot .linkIco .linkText .textP ul li{
 	line-height: 24px;
+}
+.foot .footer{
+	width: 990px;
+	height: 130px;
+	margin: 0 auto;
+}
+address{
+	width: 450px;
+	line-height: 24px;
+	margin: 0 auto;
+	text-align: center; 
+	font-style: normal;
+}
+address span,address a{
+	margin: 0 10px;
 }
