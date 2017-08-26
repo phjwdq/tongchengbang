@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0; 
+}
+body{
+	font-size: 12px;
+	font-family: Microsoft YaHei,"微软雅黑";
+}
+ul,li,ol{
+	list-style: none;
+}
+input,button,a{
+	outline: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+.clearFix:after{
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}

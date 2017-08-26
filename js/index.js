@@ -1,5 +1,5 @@
 // 轮播图
-var t = 1;
+var t = 1;//全局变量
 var timer = setInterval(function(){
 	if(t > 4){
 		t = 1;
@@ -103,26 +103,79 @@ $(".addrSear input").on("blur",function(){
 });
 // 商铺数据
 // 读取数据
+var objArr = [];//全局变量
+var start = 0;//全局变量
 $.ajax({
 	type:"GET",
 	url:"http://localhost:9999/data/1.json",
 	success:function(res){
-		setData(res.shop_data);
+		objArr = res.shop_data;
+		// setData(res.shop_data);
+		
+		// 地图mark;
+		var map = new AMap.Map('mapCont',{
+			zoom: 10,
+	    	center: [116.39,39.9]//new AMap.LngLat(116.39,39.9)
+		});
+		AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'],
+		    function(){
+		        map.addControl(new AMap.ToolBar());
+		        map.addControl(new AMap.Scale());
+		        map.addControl(new AMap.OverView({isOpen:true}));
+		});
+		for (var m = 0; m < objArr.length; m++) {
+		    var marker = new AMap.Marker({
+	   	 		position: [objArr[m].map_longitude, objArr[m].map_latitude],//marker所在的位置
+	    		map:map//,创建时直接赋予map属性
+	    		// title:objArr[m].shop_name
+			});
+			function mapFun(marker){
+				var infowindow = new AMap.InfoWindow({
+				    content: '<div><h4>'+ objArr[m].shop_name +
+				            '</h4><p>'+ objArr[m].addr_detail + '</p>' +
+				            '<a target="_blank" href="' + objArr[m].shop_addr +'">点击查看店铺</a></div>',
+				      offset: new AMap.Pixel(0, -30)
+				    });
+				var clickHandle = AMap.event.addListener(marker, 'click', function(){
+				    	infowindow.open(map, marker.getPosition())
+					});
+			}
+			mapFun(marker);
+		}
+		
+		initData(start,5);
+		$(".page a").on("click",function(){
+			if(start == 0 && $(this).parent().index() == 0){
+				alert("已经是首页！");
+				return;
+			}else if(start == 15 && $(this).parent().index() == 5){
+				alert("已经是尾页！");
+				return;
+			}else if(start != 15 && $(this).parent().index() == 5){
+				 $(".shopList ul").empty();
+				start += 5;
+				initData(start,5);
+				return;
+			}else if(start != 0 && $(this).parent().index() == 0){
+				 $(".shopList ul").empty();
+				start -= 5;
+				initData(start,5);
+				return;
+			}else{
+				 $(".shopList ul").empty();
+				//记得是$(this),带有$符号的！！
+				start = ($(this).parent().index()-1)*5;
+				console.log("start1",start);
+				initData(start,5);
+			}
+		});
 	}
 });
-//全局变量n
-// var m = 0;
-// var n = 5;
-// // console.log($(".page li:nth-child(2) a").html());
-// $(".page li:nth-child(2) a").on("click",function(){
-// 	m = 5
-// 	n = 10;
-// });
 
-function setData(item){
+function initData(start,length){
 	var strLi = "";
-	for (var i = 0; i < 5; i++) {
-		var objItem = item[i];
+	for (var i = start; i < length + start; i++) {
+		var objItem = objArr[i];
 		var objLi = "<li>" +
 						"<div class='shopInfo'>" +
 							"<a class='shopicoA' href='" + objItem.shop_addr + "'>" +
@@ -146,15 +199,34 @@ function setData(item){
 					"</li>";
 		strLi += objLi;
 	}
-	
-	$(".shopList ul").empty().append(strLi);
-	// console.log($(".shopList li"));
-	// console.log($(".shopOther a").html());
-	$(".shopList li").mouseover(function(){//??????
-		// console.log($(".shopList li").index());
-		// //$(".shopList li").css("background-color","#fafafa");//或C首字母大写
-		// $(".shopList li").css("backgroundColor","#fafafa");
-		// $(".shopList li .shopOther a").css("display","block");
+	$(".shopList ul").append(strLi);
+
+	$(".shopList li").mouseover(function(){//
+		//一定要用$(this)，一定记得有$符号！
+		//或者用e.target
+		// console.log($(this).index());
+		// //$(this).css("background-color","#fafafa");//或C首字母大写
+		$(this).css("backgroundColor","#fafafa");
+		$(this).find(".shopOther").find("a").show();
+	});
+	$(".shopList li").mouseleave(function(){//
+		$(this).css("backgroundColor","#fff");
+		$(this).find(".shopOther").find("a").hide();
 	});
 }
+
+// 地图
+// 全局变量
+// 在js文件中设置padding值
+var heightPad = $(document).height()-$(".mapShop").height()*2-50;
+$(".map a").on("click",function(){
+	$(".mapSear").show();
+	$(".mapSear").css("paddingTop",heightPad);
+
+});
+$(".mapName button").on("click",function(){
+	$(".mapSear").hide();
+});
+
+
 
