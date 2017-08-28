@@ -32,6 +32,45 @@ $(document).on("blur","#iptSear",function(){
 	$(".iptSear1").hide();
 });
 // 全局变量
+var arrData = ["电脑","电脑清灰","路由","安装路由","安装系统","ssss","saa","sad","sade"];
+function searList(arr){
+	var str = "";
+	for (var i = 0; i < arr.length; i++) {
+		var objLi = '<li>'+
+		            	'<a href="javascript:void">'+arr[i]+'</a>'+
+		            '</li>';
+		str += objLi;
+	}
+	$(".iptSear2 ul").empty().append(str);
+}
+// 筛选数据
+// 全局变量
+function regData(arr){
+	console.log($("#iptSear").val());
+	var reg = new RegExp('^'+$("#iptSear").val());
+	var arrTemp = [];
+	for (var i = 0; i < arr.length; i++) {
+		if(reg.test(arr[i])){
+			arrTemp.push(arr[i]);
+		}
+	}
+	console.log(arrTemp);
+	searList(arrTemp);
+}
+$("#iptSear").on("keyup",function(){
+	$(".iptSear1").hide();
+	regData(arrData);
+	// $(this).val(function(i,old){
+	// 	return $(".iptSear2 ul li a").text()
+	// })
+	
+});
+
+// $(".iptSear2 ul li a").on("click",function(){
+// 	console.log($(this).text());
+// 	// $("#iptSear").val($(this).text());
+// });//???
+全局变量
 var flag = true;
 $("#span000").on("click",function(){
 	$(".iptSear1").toggle();
@@ -107,7 +146,7 @@ function initData(){
 							'</p>' + 
 						'</div>' +
 						'<div class="price">' +
-							'<span class="coin">&yen;</span>' +
+							'<span class="coin">&yen; </span>' +
 							'<span>' + item.product_price + '</span>' +
 							'<button>立即购买</button>' + 
 						'</div>' +

@@ -65,7 +65,6 @@
 	width: 960px;
 	margin: 0 auto; 
 	padding: 10px 0 0 0;
-
 }
 .shopSear .sear h1{
 	width: 300px;
@@ -185,6 +184,38 @@
 .shopSear .sear .searText .iptSear1 ul li a:hover{
 	background: #c9c9c9;
 }
+.shopSear .sear .searText .iptSear2{
+	width: 490px;
+	/*height: 225px;*/
+	padding: 10px;
+	border: 1px solid #4bac20;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 70px;
+	/*display: none;*/
+}
+.shopSear .sear .searText .iptSear2 ul{
+	width: 470px;
+}
+.shopSear .sear .searText .iptSear2 ul li{
+	width: 470px;
+	height: 30px;
+	line-height: 30px;
+}
+.shopSear .sear .searText .iptSear2 ul li a{
+	display: block;
+	width: 470px;
+	height: 30px;
+	color: #000;
+}
+.shopSear .sear .searText .iptSear2 ul li a:hover{
+	background: #c9c9c9;
+	text-decoration: none;/*????*/
+}
+
+
+
 /*店铺名*/
 .shopName{
 	width: 960px;
@@ -308,7 +339,7 @@
 /*分类列表搜索*/
 .main{
 	width: 960px;
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
 	/*height: */
 }
 .main .mainLeft{
@@ -477,8 +508,217 @@
 	background-color: #228af2;
 	color: #fff;
 }
-
-
+.main .mainLeft .goodsComment{
+	width: 760px;
+	border: 1px solid #acb9c9;
+}
+.main .mainLeft .goodsComment .client{
+	width: 760px;
+	height: 35px;
+	border-bottom: 1px solid #acb9c9;
+}
+.main .mainLeft .goodsComment .commentsList{
+	width: 760px;
+}
+.main .mainLeft .goodsComment .commentsList li{
+	width: 760px;
+	border-bottom: 1px dashed #acb9c9;
+}
+.main .mainLeft .goodsComment .commentsList li{
+	width: 760px;
+	height: 110px;
+	padding: 10px 0 0 0;
+	border-bottom: 1px dashed #acb9c9;
+}
+.main .mainLeft .goodsComment .commentsList li:last-child{
+	border-bottom: none;
+}
+.main .mainLeft .goodsComment .commentsList li .img{
+	width: 110px;
+	text-align: center;
+	float: left;
+}
+.main .mainLeft .goodsComment .commentsList li .img img{
+	width: 32px;
+	height: 32px;
+	margin: 10px 0; 
+}
+.main .mainLeft .goodsComment .commentsList li .img p{
+	color: #acb9c9;
+}
+.main .mainLeft .goodsComment .commentsList li .text{
+	width: 440px;
+	float: left;
+}
+.main .mainLeft .goodsComment .commentsList li .text p{
+	width: 440px;
+	margin: 0 0 10px 0;
+} 
+.main .mainLeft .goodsComment .commentsList li .text p:first-child{
+	margin: 0 0 20px 0;
+	color: red;
+} 
+.main .mainLeft .goodsComment .commentsList li .text p:last-child{
+	color: #acb9c9;
+} 
+.main .mainLeft .goodsComment .commentsList li .orderNum{
+	width: 200px;
+	color: #acb9c9;
+	float: right;
+} 
+.main .mainLeft .goodsComment .pageList{
+	width: 280px;
+	height: 36px;
+	margin: 0 auto;
+} 
+.main .mainLeft .goodsComment .pageList li{
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	float: left;
+	text-align: center;
+	margin:0 5px 0 0; 
+} 
+.main .mainLeft .goodsComment .pageList li:first-child,.main .mainLeft .goodsComment .pageList li:last-child{
+	width: 65px;
+} 
+.main .mainLeft .goodsComment .pageList li a{
+	display: block;
+	width: 26px;
+	height: 26px;
+	color: #000;
+	border: 1px solid #acb9c9; 
+} 
+.main .mainLeft .goodsComment .pageList li:first-child a,.main .mainLeft .goodsComment .pageList li:last-child a{
+	width: 65px;
+} 
+.main .mainLeft .goodsComment .pageList li a:hover{
+	color: #fff;
+	background-color: #257fe7;
+} 
+.main .mainLeft .shopDetail{
+	width: 760px;
+	margin: 10px 0; 
+	border: 1px solid #acb9c9;
+}
+.main .mainLeft .shopDetail .shopP{
+	width: 760px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #acb9c9;
+}
+.main .mainLeft .shopDetail table{
+	width: 760px;
+}
+.main .mainLeft .shopDetail table tr{
+	width: 760px;
+	height: 40px;
+}
+.main .mainLeft .shopDetail table tr td{
+	padding: 0 10px;
+}
+.main .mainLeft .shopDetail table tr:last-child{
+	height: 60px;
+}
+.main .mainLeft .shopDetail table tr td:first-child{
+	width: 100px;
+	height: 40px;
+	text-align: right;
+	background-color: #ededed;
+	/*margin不起作用，padding无效果。加白色边框！*/
+	border: 2px solid #fff;
+}
+.main .mainLeft .shopDetail table tr:last-child td:first-child{
+	height: 60px;
+}
+.main .mainLeft .shopDetail table tr td:last-child{
+	width: 660px;
+	height: 40px;
+	background-color: #fcfcfc;
+}
+.main .mainLeft .shopDetail table tr:last-child td:last-child{
+	height: 60px;
+}
+.main .mainLeft .shopDetail table tr td:last-child{
+	color: #c1a5a5;
+}
+.main .mainLeft .shopDetail table tr:nth-child(2) td span{
+	display: block;
+	width: 58px;
+	height: 20px;
+	padding: 0 10px;
+	margin: 0 0 0 10px;
+	color: #337d39;
+	border: 1px solid #badd98;
+	float: left;
+}
+.main .mainLeft .shopDetail table tr:last-child td p{
+	color: red;
+}
+.main .mainLeft .shopDetail table tr:last-child td p span{
+	color: #c1a5a5;
+}
+.main .mainLeft .goodsServer{
+	width: 760px;
+	height: 490px;
+	border: 1px solid #acb9c9;
+}
+.main .mainLeft .goodsServer .serverP{
+	width: 760px;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #acb9c9;
+}
+.main .mainLeft .goodsServer .quality{
+	width: 375px;
+	height: 75px;
+	line-height: 75px;
+	font-size: 16px;
+	margin: 0 auto;
+}
+.main .mainLeft .goodsServer .quality img{
+	width: 46px;
+	height: 52px;
+	margin: 10px 10px 0 0;
+	float: left;
+}
+.main .mainLeft .goodsServer .quality p{
+	width: 300px;
+	height: 52px;
+	float: left;
+}
+.main .mainLeft .goodsServer .qualityList{
+	width: 675px;
+	height: 350px;
+	margin: 0 auto; 
+}
+.main .mainLeft .goodsServer .qualityList li{
+	width: 675px;
+	height: 70px;
+	padding: 10px 0;
+	border-bottom: 1px solid #efefef;
+}
+.main .mainLeft .goodsServer .qualityList li:last-child{
+	border-bottom: none;
+}
+.main .mainLeft .goodsServer .qualityList li img{
+	width: 35px;
+	height: 41px;
+	float: left;
+	margin: 0 10px 0 0; 
+}
+.main .mainLeft .goodsServer .qualityList li .qualityDes{
+	width: 630px;
+	height: 41px;
+	padding: 8px 0 0 0;
+	float: left;
+}
+.main .mainLeft .goodsServer .qualityList li .qualityDes p:first-child{
+	color: #0e8726;
+	font-weight: bold;
+	font-size: 14px;
+}
 .mainRight{
 	width: 200px;
 	height: 400px;
@@ -497,4 +737,77 @@
 	width: 180px;
 	height: 180px;
 	border: 1px solid #000; 
+}
+
+
+
+
+
+.footWidth{
+	width: 100%;
+	height: 270px;
+	background-color: #fafafa;
+	border-top: 1px solid #e6e6e6; 
+}
+.foot{
+	height: 270px;
+	color: #909090;
+}
+a{
+	color: #909090;
+}
+a:hover{
+	text-decoration: underline;
+}
+.foot .linkIco{
+	width: 990px;
+	height: 130px;
+	margin: 0 auto; 
+	border-bottom: 1px solid #e6e6e6;
+}
+.foot .linkIco .linkText{
+	width: 240px;
+	height: 130px;
+	padding: 20px  0 0 0;
+	float: left;
+	/*border: 1px solid red;*/
+}
+.foot .linkIco .linkText .imgP{
+	width: 70px;
+	height: 110px;
+	/*border: 1px solid yellow;*/
+	float: left;
+	background: url(../img/8foot1.png) no-repeat 20px 0;
+}
+.foot .linkIco .linkText .textP{
+	width: 150px;
+	height: 110px;
+	float: left;
+}
+.foot .linkIco .linkText .textP h4{
+	width: 150px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 16px;
+}
+.foot .linkIco .linkText .textP ul{
+	width: 150px;
+}
+.foot .linkIco .linkText .textP ul li{
+	line-height: 24px;
+}
+.foot .footer{
+	width: 990px;
+	height: 130px;
+	margin: 0 auto;
+}
+address{
+	width: 450px;
+	line-height: 24px;
+	margin: 0 auto;
+	text-align: center; 
+	font-style: normal;
+}
+address span,address a{
+	margin: 0 10px;
 }
