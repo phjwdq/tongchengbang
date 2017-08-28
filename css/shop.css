@@ -293,7 +293,7 @@
 	width: 960px;
 	height: 35px;
 	line-height: 35px;
-	margin: 0 auto;
+	margin: 10px auto;
 	border: 1px solid #f0f0f0;
 	color: #ff0000; 
 }
@@ -312,14 +312,14 @@
 	/*height: */
 }
 .main .mainLeft{
-	width: 960px;
+	width: 760px;
 	float: left;
 }
 .main .mainLeft .sortList{
 	width: 760px;
 	height: 45px;
 	line-height: 45px;
-	margin: 10px 0; 
+	margin: 0 0 10px 0; 
 	border-bottom: 1px solid #e6e6e6;
 }
 .main .mainLeft .sortList ul{
@@ -332,6 +332,7 @@
 	height: 45px;
 	float: left;
 	margin: 0 7px;
+	text-align: center;
 }
 .main .mainLeft .sortList ul li a{
 	display: block;
@@ -340,7 +341,11 @@
 	color: #666666;
 	font-weight: bold;
 	float: left;
-	margin: 0 14px;
+}
+.main .mainLeft .sortList ul li:first-child a{
+	border-bottom: 2px solid #2ece02;
+	color: #128422;
+	/*cursor: normal;????*/
 }
 .main .mainLeft .sortList input{
 	width: 160px;
@@ -348,7 +353,9 @@
 	text-indent: 25px;
 	margin: 10px 0 0 0; 
 	float: left;
+	/*font-size: 8px;???*/
 	border: 1px solid #e6e6e6;
+	color: #666666;
 	border-radius: 5px 0 0 5px; 
 	background: url(../img/9shopSortList1.png) no-repeat 10px center;
 }
@@ -360,8 +367,134 @@
 	margin: 10px 0 0 0; 
 	float: left;
 }
-.AAA{
-	width: 100px;
-	height: 50px;
-	background-color: pink;
+/*商品列表*/
+.main .mainLeft .shopGoods{
+	width: 760px;
+	margin: 0 auto;
+}
+.main .mainLeft .shopGoods .goodsCount{
+	width: 760px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #f4f4f4;
+}
+.main .mainLeft .shopGoods .goodsCount li{
+	margin: 0 10px;
+	float: left; 
+}
+.main .mainLeft .shopGoods .goodsCount li:first-child a{
+	color: #000;
+	font-weight: bold;
+}
+.main .mainLeft .shopGoods .goodsList{
+	width: 760px;
+	padding: 10px;
+}
+.main .mainLeft .shopGoods .goodsList li{
+	width: 740px;
+	border-bottom: 1px solid #f4f4f4;
+	position: relative;
+}
+.main .mainLeft .shopGoods .goodsList li .imgA{
+	display: block;
+	width: 70px;
+	height: 70px;
+	border: 1px solid #f4f4f4;
+	float: left;
+	margin: 0 10px 0 0; 
+}
+.main .mainLeft .shopGoods .goodsList li .imgA img{
+	width: 70px;
+	height: 70px;
+}
+.main .mainLeft .shopGoods .goodsList li .goodsText{
+	width: 420px;
+	line-height: 18px;
+	float: left;
+}
+.main .mainLeft .shopGoods .goodsList li .goodsText{
+	color: #a59999;
+}
+.main .mainLeft .shopGoods .goodsList li .goodsText span{
+	font-weight: bold;
+}
+.main .mainLeft .shopGoods .price{
+	width: 220px;
+	color: #ffa019;
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+.main .mainLeft .shopGoods .price span{
+	font-size: 18px;
+	font-weight: bold;
+}
+.main .mainLeft .shopGoods .price .coin{
+	color: #a59999;
+	font-weight: normal;
+}
+.main .mainLeft .shopGoods .price button{
+	width: 95px;
+	height: 35px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #a59999; /*???*/
+	border-radius: 5px;
+	cursor: pointer;
+	float: right;
+}
+.main .mainLeft .goodsPage{
+	width: 460px;
+	margin: 0 auto; 
+	height: 40px;
+	/*line-height: 40px;*/
+}
+.main .mainLeft .goodsPage li{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 0 5px;
+	float: left;
+}
+.main .mainLeft .goodsPage li:first-child,.main .mainLeft .goodsPage li:nth-child(2),.main .mainLeft .goodsPage li:last-child{
+	width: 60px;
+	height: 30px;
+}
+.main .mainLeft .goodsPage li a{
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #dfdfe1;
+	border-radius: 3px;
+}
+.main .mainLeft .goodsPage li:first-child a,.main .mainLeft .goodsPage li:nth-child(2) a,.main .mainLeft .goodsPage li:last-child a{
+	width: 60px;
+	height: 30px;
+}
+.main .mainLeft .goodsPage li a:hover{
+	background-color: #228af2;
+	color: #fff;
+}
+
+
+.mainRight{
+	width: 200px;
+	height: 400px;
+	text-align: center;
+	float: right;
+}
+.mainRight img{
+	margin: 10px 0;
+}
+.mainRight .map{
+	width: 180px;
+	height: 200px;
+	float: right;
+}
+.mainRight .map #shopMap{
+	width: 180px;
+	height: 180px;
+	border: 1px solid #000; 
 }

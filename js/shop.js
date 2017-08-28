@@ -46,5 +46,73 @@ $("#span000").on("click",function(){
 	}
 });
 
-// 
+// 地图数据 怎么带数据到下一个页面？？？
+// $.ajax({
+// 	type: "GET",
+// 	url: "http://localhost:9999/data/1.json",
+// 	success: function(res){
+// 		// console.log(res);
+// 		var objArr = res.product;
+// 		// 地图
+// 		var map = new AMap.Map('shopMap',{
+// 			zoom: 10,
+// 	    	center: [116.39,39.9]//new AMap.LngLat(116.39,39.9)
+// 		});
+// 		AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'],
+// 		    function(){
+// 		        map.addControl(new AMap.ToolBar());
+// 		        map.addControl(new AMap.Scale());
+// 		        map.addControl(new AMap.OverView({isOpen:true}));
+// 		});
+// 		var marker = new AMap.Marker({
+// 	   	 		position: [objArr.map_longitude, objArr.map_latitude],//marker所在的位置
+// 	    		map:map//,创建时直接赋予map属性
+// 	    		// title:objArr[m].shop_name
+// 			});
+// });
 
+
+// 获取商品列表数据
+var objArr = "";//全局变量
+var start = 0;
+var length = 5;
+$.ajax({
+	type: "GET",
+	url: "http://localhost:9999/data/5.json",
+	success: function(res){
+		console.log(res);
+		objArr = res.product;
+		initData();
+
+
+
+		// function setData(){
+
+		// }
+	}
+});
+function initData(){
+	var str = "";
+	for (var i = 0; i < 5; i++) {
+		var item = objArr[i];
+		var objLi = '<li class="clearFix">' +
+		                '<a class="imgA" href="' + item.goumai_order_url + '">' +
+							'<img src="' + item.product_img +' " alt="图片">' + 
+						'</a>' + 
+						'<div class="goodsText">' + 
+							'<a href="' + item.goumai_order_url + '">手机苹果iphone</a>' + 
+							'<p>' + 
+								'<span>服务内容：</span>' + 
+								item.service_desc +
+							'</p>' + 
+						'</div>' +
+						'<div class="price">' +
+							'<span class="coin">&yen;</span>' +
+							'<span>' + item.product_price + '</span>' +
+							'<button>立即购买</button>' + 
+						'</div>' +
+					'</li>';
+		str += objLi;
+	}
+	$(".goodsList").empty().append(str);
+}

@@ -8,6 +8,7 @@ html,body{
 body{
 	font-size: 12px;
 	font-family: Microsoft YaHei,"微软雅黑";
+	overflow-x: hidden;
 }
 ul,li,ol{
 	list-style: none;
