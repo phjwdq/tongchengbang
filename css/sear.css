@@ -1,0 +1,683 @@
+/*头部*/
+.header{
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	background-color: #f6f6f6;
+	border: 1px solid #c7c7c7;
+}
+.header .headWidth{
+	width: 960px;
+	height: 32px;
+	margin: 0 auto; 
+}
+.header .headWidth a,.header .headWidth li{
+	color: #666666;
+}
+.header .headWidth a:hover{
+	text-decoration: underline;
+}
+
+.header .headWidth .city{
+	width: 250px;
+	height: 32px;
+	float: left;
+}
+.header .headWidth .city ul{
+	width: 200px;
+	height: 32px;
+	float: left;
+}
+.header .headWidth .city ul li{
+	float: left;
+	padding: 0 5px;
+}
+.header .headWidth .city ul li:nth-child(2){
+	background: url(../img/1headerLine.png) no-repeat right center;
+}
+.header .headWidth .list{
+	width: 480px;
+	height: 32px;
+	float: right;
+}
+.header .headWidth .list ul{
+	width: 480px;
+	height: 32px;
+}
+.header .headWidth .list ul li{
+	padding: 0 10px;
+	float: left;
+	background: url(../img/1headerLine.png) no-repeat right center;
+}
+.header .headWidth .list ul li:last-child{
+	background: none;
+}
+.header .headWidth .list ul li:last-child a{
+	color: red;
+}
+/*搜索*/
+.shopSear{
+	width: 100%;
+	height: 100px;
+	border-bottom: 4px solid #4bac20;
+}
+.shopSear .sear{
+	height: 100px;
+	width: 960px;
+	margin: 0 auto; 
+	padding: 10px 0 0 0;
+}
+.shopSear .sear h1{
+	width: 235px;
+	height: 90px;
+	font-size: 0;
+	float: left;
+	background: url(../img/9shop_03.jpg) no-repeat left center;
+}
+.shopSear .sear .city{
+	width: 120px;
+	height: 90px;
+	float: left;
+	background: url(../img/10sear1.png) no-repeat left center;
+}
+.shopSear .sear .city p{
+	width: 40px;
+	margin: 25px 0 0 20px; 
+	font-size: 16px;
+	font-weight: bold;
+	color: #b29999;
+}
+.shopSear .sear .city a{
+	margin: 0px 0 0 20px; 
+}
+.shopSear .sear .searText{
+	width: 600px;
+	height: 90px;
+	float: right;
+	position: relative;
+}
+.shopSear .sear .searText .listSear{
+	width: 650px;
+	height: 24px;
+	line-height: 24px;
+}
+.shopSear .sear .searText .listSear li{
+	height: 24px;
+	margin:  0 5px 5px 5px;
+	float: left;
+}
+.shopSear .sear .searText .listSear li a{
+	display: block;
+	height: 24px;
+	padding: 0 10px;
+	color: #000;
+}
+.shopSear .sear .searText .listSear li a:hover{
+	background-color: #f2f7fb;
+}
+.shopSear .sear .searText .listSear li:first-child a{
+	background-color: #4bac20;
+	color: #fff;
+}
+.shopSear .sear .searText #iptSear{
+	width: 490px;
+	height: 40px;
+	border: 2px solid #4bac20;
+	font-size: 14px;
+	color: #969696;
+	float: left;
+}
+.shopSear .sear .searText .spanTri{
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-top: 5px solid #4bac20;
+	cursor: pointer;
+	position: absolute;
+	left: 470px;
+	top: 50%;
+}
+.shopSear .sear .searText .spanTri000{
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-bottom: 5px solid #4bac20;
+	cursor: pointer;
+	position: absolute;
+	left: 470px;
+	top: 50%;
+}
+.shopSear .sear .searText button{
+	width: 75px;
+	height: 40px;
+	border: none;
+	background-color: #4bac20;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+}
+.shopSear .sear .searText .iptSear1{
+	width: 490px;
+	height: 225px;
+	border: 1px solid #4bac20;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 70px;
+	display: none;
+}
+.shopSear .sear .searText .iptSear1 ul{
+	width: 490px;
+	height: 225px;
+	font-size: 14px;
+}
+.shopSear .sear .searText .iptSear1 ul li{
+	width: 490px;
+	position: relative;
+}
+.shopSear .sear .searText .iptSear1 ul li span{
+	display: block;
+	width: 16px;
+	height: 16px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	background: url(../img/9shopListSear2.png) center center;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+}
+.shopSear .sear .searText .iptSear1 ul li:first-child span,.shopSear .sear .searText .iptSear1 ul li:nth-child(2) span,.shopSear .sear .searText .iptSear1 ul li:nth-child(3) span{
+	background: url(../img/9shopListSear1.png) center center;
+}
+.shopSear .sear .searText .iptSear1 ul li a{
+	display: block;
+	width: 490px;
+	color: #000;
+	line-height: 28px;
+	text-indent: 30px;
+}
+.shopSear .sear .searText .iptSear1 ul li a:hover{
+	background: #c9c9c9;
+}
+.shopSear .sear .searText .iptSear2{
+	width: 490px;
+	padding: 10px;
+	border: 1px solid #4bac20;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 70px;
+	display: none;
+}
+.shopSear .sear .searText .iptSear2 ul{
+	width: 470px;
+}
+.shopSear .sear .searText .iptSear2 ul li{
+	width: 470px;
+	height: 30px;
+	line-height: 30px;
+}
+.shopSear .sear .searText .iptSear2 ul li a{
+	display: block;
+	width: 470px;
+	height: 30px;
+	color: #000;
+}
+.shopSear .sear .searText .iptSear2 ul li a:hover{
+	background: #c9c9c9;
+	text-decoration: none;/*????*/
+}
+/*广告*/
+.banner{
+	width: 960px;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+}
+.banner a{
+	display: block;
+	width: 960px;
+	height: 120px;
+}
+.banner button{
+	width: 26px;
+	height: 26px;
+	background: url(../img/10sear3.png) no-repeat center center;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/*搜索分类*/
+.searSort{
+	width: 960px;
+	height: 260px;
+	margin: 0 auto 5px auto;
+}
+.searSort .allRes{
+	width: 960px;
+	height: 40px;
+	line-height: 40px;
+	color: #666666;
+	font-size: 14px;
+}
+.searSort .allRes p strong{
+	color: #000;
+}
+
+
+
+.searSort .allQue{
+	width: 960px;
+	height: 100px;
+	border: 1px solid #ffdb84;
+	background-color: #fff9d6;
+	padding: 10px 20px;
+}
+.searSort .allQue p{
+	width: 940px;
+	height: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.searSort .allQue p strong{
+	color: #ff0000;
+}
+.searSort .allQue ul{
+	width: 870px;
+	height: 80px;
+}
+.searSort .allQue ul li{
+	float: left;
+	line-height: 24px;
+	margin: 0 20px 0 0;
+}
+.searSort .allQue ul li a:hover{
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+
+.searSort .allAera{
+	width: 960px;
+	height: 120px;
+	padding: 10px 20px;
+	border: 1px solid #dfdfe1;
+	border-top: none;
+}
+.searSort .allAera .aera{
+	width: 50px;
+	height: 120px;
+	float: left;
+}
+.searSort .allAera .aeraText{
+	width: 820px;
+	height: 120px;
+	float: left;
+	position: relative;
+}
+.searSort .allAera .aeraText ul{
+	width: 820px;
+	height: 60px;
+}
+.searSort .allAera .aeraText ul li{
+	line-height: 24px;
+	margin: 0 5px 0 0;
+	float: left;
+}
+.searSort .allAera .aeraText ul li a{
+	display: block;
+	padding: 5px;
+}
+.searSort .allAera .aeraText ul li:first-child a{
+	background-color: #2e74d3;
+	color: #fff;
+}
+.searSort .allAera .aeraText ul li a:hover{
+	background-color: #2e74d3;
+	color: #fff;
+}
+.searSort .allAera .aeraText .aeraSear{
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+}
+.searSort .allAera .aeraText .aeraSear #iptAeraSear{
+	width: 235px;
+	height: 30px;
+	border: 1px solid #ffa51d;
+	background: url(../img/10sear4.png) no-repeat 5px center;
+	text-indent: 20px;
+	color: #999999;
+	float: left;
+}
+.searSort .allAera .aeraText .aeraSear button{
+	width: 75px;
+	height: 30px;
+	color: #fff;
+	font-weight: bold;
+	background-color: #ffa51d;
+	float: left;
+}
+.searSort .allAera .aeraText .aeraSear1,.searSort .allAera .aeraText .aeraSear2{
+	width: 235px;
+	background: #fff;
+	border: 1px solid #5e5654;
+	padding: 10px;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	display: none;
+}
+.searSort .allAera .aeraText .aeraSear1{
+	height: 60px;
+}
+.searSort .allAera .aeraText .aeraSear1 p{
+	width: 215px;
+	height: 24px;
+	color: #b29999;
+}
+.searSort .allAera .aeraText .aeraSear2 .sear2List{
+	width: 215px;
+}
+.searSort .allAera .aeraText .aeraSear2 .sear2List li{
+	width: 215px;
+}
+.searSort .allAera .aeraText .aeraSear2 .sear2List li:hover{
+	background-color: #e4e4e4; 
+}
+
+
+
+
+
+/*主题搜索列表*/
+.main{
+	width: 960px;
+	height: 1695px;
+	margin: 0 auto;
+}
+.mainLeft{
+	width: 780px;
+	height: 1695px;
+	float: left;
+}
+.main .mainLeft .rankSort{
+	width: 780px;
+	height: 38px;
+	background: #f7f7f7;
+	border: 1px solid #dfdfe1;
+	border-top: 2px solid #4bac20;
+}
+.main .mainLeft .rankSort .list{
+	width: 200px;
+	height: 36px;
+	float: left;
+}
+.main .mainLeft .rankSort .list ul{
+	width: 200px;
+	height: 36px;
+	border-right: 1px solid #e3e3e5;
+}
+.main .mainLeft .rankSort .list ul li{
+	width: 98px;
+	height: 36px;
+	cursor: pointer;
+	float: left;
+}
+.main .mainLeft .rankSort .list ul li:first-child{
+	background-color: #e4e4e4;
+}
+.main .mainLeft .rankSort .list ul li span{
+	display: block;
+	float: left;
+	margin: 10px 0 0 0;
+}
+.main .mainLeft .rankSort .list ul li span:first-child{
+	width: 10px;
+	height: 10px;
+	margin: 14px 5px 0 15px;
+	background: url(../img/10sear5.png) no-repeat center center;
+}
+.main .mainLeft .rankSort .iptCheck{
+	width: 260px;
+	height: 36px;
+	line-height: 36px;
+	float: left;
+}
+.main .mainLeft .rankSort .iptCheck input{
+	margin: 0 0 0 10px; 
+}
+.main .mainLeft .rankSort .map{
+	width: 70px;
+	height: 36px;
+	float: right;
+}
+.main .mainLeft .rankSort .map p{
+	width: 75px;
+	height: 24px;
+	line-height: 20px;
+	text-indent: 20px;
+	margin: 6px 0 0 0;
+	cursor: pointer;
+	border: 1px solid #e6e6e6;
+	background: url(../img/10sear6.png) no-repeat 5px center;
+}
+.main .mainLeft .rankSort .page{
+	width: 120px;
+	height: 36px;
+	float: right;
+}
+.main .mainLeft .rankSort .page span{
+	display: block;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	margin: 6px 0 0 0;
+	float: right;
+}
+.main .mainLeft .rankSort .page .line{
+	width: 5px;
+}
+.main .mainLeft .rankSort .page .picNext{
+	background: url(../img/10sear8.png) no-repeat center center;
+}
+.main .mainLeft .rankSort .page .picBefore{
+	background: url(../img/10sear7.png) no-repeat center center;
+}
+
+
+.main .mainLeft .leftList{
+	width: 780px;
+	height: 1600px;
+}
+.main .mainLeft .leftList .ulList{
+	width: 780px;
+	height: 1600px;
+}
+.main .mainLeft .leftList .ulList li{
+	width: 780px;
+	height: 105px;
+	padding: 15px;
+	border: 1px solid #dfdfe1;
+}
+.main .mainLeft .leftList .ulList li .imgA{
+	display: block;
+	width: 74px;
+	height: 74px;
+	margin: 0 10px 0 0;
+	border: 1px solid #dfdfe1;
+	float: left;
+}
+.main .mainLeft .leftList .ulList li .imgA img{
+	width: 72px;
+	height: 72px;
+}
+.main .mainLeft .leftList .ulList li .question{
+	width: 370px;
+	height: 75px;
+	float: left;
+}
+.main .mainLeft .leftList .ulList li .question p{
+	line-height: 24px;
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: clip;
+}
+.main .mainLeft .leftList .ulList li .question p:first-child a:hover{
+	text-decoration: underline;
+}
+.main .mainLeft .leftList .ulList li .question p:last-child a:first-child{
+	text-decoration: underline;
+}
+.main .mainLeft .leftList .ulList li .question p:last-child .imgV{
+	margin: 0 10px 0 0;
+}
+
+.main .mainLeft .leftList .ulList li .aeraDetail{
+	width: 130px;
+	height: 75px;
+	text-align: center;
+	float: left;
+	position: relative;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail p{
+	font-size: 14px;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail p .price{
+	color: #ffbd4f;
+	font-weight: bold;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail .aeraList{
+	width: 135px;
+	height: 25px;
+	text-align: center;
+	padding: 0 0 0 5px;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail .aeraList p{
+	width: 130px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #dfdfe1;
+	background: url(../img/9shoptri.png) no-repeat 110px center;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail .showList{
+	width: 130px;
+	height: 75px;
+	border: 1px solid #dfdfe1;
+	border-top: none;
+	background-color: #fff;
+	position: absolute;
+	top: 40px;
+	left: 5px;
+	display: none;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail .showList ul{
+	width: 130px;
+	height: 75px;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail .showList ul li{
+	width: 130px;
+	height: 25px;
+	line-height: 25px;
+	padding: 0;
+	border: none;
+}
+.main .mainLeft .leftList .ulList li .aeraDetail .payP{
+	margin: 5px 0 0 0;
+}
+.main .mainLeft .leftList .ulList li .searDetail{
+	width: 110px;
+	height: 75px;
+	padding: 20px 0 0 0;
+	float: right;
+}
+.main .mainLeft .leftList .ulList li .searDetail a{
+	display: block;
+	width: 95px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #ff9711;
+}
+
+
+
+.footWidth{
+	width: 100%;
+	height: 270px;
+	background-color: #fafafa;
+	border-top: 1px solid #e6e6e6; 
+}
+.foot{
+	height: 270px;
+	width: 960px;
+	margin: 0 auto;
+	color: #909090;
+}
+a{
+	color: #909090;
+}
+a:hover{
+	text-decoration: underline;
+}
+.foot .linkIco{
+	width: 960px;
+	height: 130px;
+	margin: 0 auto; 
+	border-bottom: 1px solid #e6e6e6;
+}
+.foot .linkIco .linkText{
+	width: 240px;
+	height: 130px;
+	padding: 20px  0 0 0;
+	float: left;
+	/*border: 1px solid red;*/
+}
+.foot .linkIco .linkText .imgP{
+	width: 70px;
+	height: 110px;
+	/*border: 1px solid yellow;*/
+	float: left;
+	background: url(../img/8foot1.png) no-repeat 20px 0;
+}
+.foot .linkIco .linkText .textP{
+	width: 150px;
+	height: 110px;
+	float: left;
+}
+.foot .linkIco .linkText .textP h4{
+	width: 150px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 16px;
+}
+.foot .linkIco .linkText .textP ul{
+	width: 150px;
+}
+.foot .linkIco .linkText .textP ul li{
+	line-height: 24px;
+}
+.foot .footer{
+	width: 960px;
+	height: 130px;
+	margin: 0 auto;
+}
+address{
+	width: 450px;
+	line-height: 24px;
+	margin: 0 auto;
+	text-align: center; 
+	font-style: normal;
+}
+address span,address a{
+	margin: 0 10px;
+}

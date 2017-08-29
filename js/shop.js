@@ -21,6 +21,7 @@ function iptFun(str){
 	}
 }
 //全局变量
+// ???与下面的keyup的关系
 var strIpt = "";
 $(document).on("focus","#iptSear",function(){
 	strIpt = $(this).val();
@@ -57,7 +58,7 @@ function regData(arr){
 	console.log(arrTemp);
 	searList(arrTemp);
 }
-$("#iptSear").on("keyup",function(){
+$("#iptSear").on("keyup",function(){//???
 	$(".iptSear1").hide();
 	regData(arrData);
 	// $(this).val(function(i,old){

@@ -8,6 +8,7 @@
 }
 .header .headWidth{
 	width: 960px;
+	height: 32px;
 	margin: 0 auto; 
 }
 .header .headWidth a,.header .headWidth li{
@@ -751,6 +752,8 @@
 }
 .foot{
 	height: 270px;
+	width: 960px;
+	margin: 0 auto;
 	color: #909090;
 }
 a{
@@ -760,7 +763,7 @@ a:hover{
 	text-decoration: underline;
 }
 .foot .linkIco{
-	width: 990px;
+	width: 960px;
 	height: 130px;
 	margin: 0 auto; 
 	border-bottom: 1px solid #e6e6e6;
@@ -797,7 +800,7 @@ a:hover{
 	line-height: 24px;
 }
 .foot .footer{
-	width: 990px;
+	width: 960px;
 	height: 130px;
 	margin: 0 auto;
 }
