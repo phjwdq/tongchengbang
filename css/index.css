@@ -180,10 +180,38 @@ img{
 	display: block;
 	width: 1200px;
 	height: 340px;
+	overflow: hidden;
+	position: relative;
 }
-.banner .imgA img{
+.banner .imgA .imgDiv{
+	width: 6000px;
+	height: 340px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.banner .imgA .imgDiv img{
 	width: 1200px;
 	height: 340px;
+	float: left;
+}
+.banner .imgA .imgCir{
+	width: 105px;
+	height: 24px;
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+}
+.banner .imgA .imgCir span{
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 5px 0 0;
+	border-radius: 50%;
+}
+.banner .imgA .imgCir .imgCir1{
+	background: #000;
 }
 /*列表*/
 .banner .list{
@@ -928,30 +956,36 @@ img{
 	position: absolute;
 	left: 0;
 	top: 0;
-	/*padding: 50px 0 0 0;*/
 	display: none;
 }
-.mapSear .mapShop{
+.mapSear .mapMap{
+	position: relative;
+}
+.mapSear .mapMap .mapShop{
 	width: 890px;
 	height: 550px;
-	/*border: 1px solid red;*/
 	margin: 0 auto; 
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*right: 0;
+	bottom: 0;*/
 }
-.mapSear .mapShop .mapName{
+.mapSear .mapMap .mapShop .mapName{
 	width: 890px;
 	height: 32px;
 	line-height: 32px;
 	background: #f4edff;
 	border-bottom: 1px solid #e1e2da;
 }
-.mapSear .mapShop .mapName h4{
+.mapSear .mapMap .mapShop .mapName h4{
 	width: 150px;
 	height: 32px;
 	text-indent: 15px;
 	font-weight: normal;
 	float: left;	
 }
-.mapSear .mapShop .mapName button{
+.mapSear .mapMap .mapShop .mapName button{
 	width: 30px;
 	height: 30px;
 	cursor: pointer;
@@ -959,11 +993,28 @@ img{
 	float: right;
 	background: url(../img/7map1.png) no-repeat center center;	
 }
-.mapSear .mapShop #mapCont{
+.mapSear .mapMap .mapShop #mapCont{
 	width: 890px;
 	height: 500px;
 }
+
+/*底部*/
 .footIframe{
 	height: 275px;
 	width: 100%;
+}
+/*回顶部*/
+.toTop{
+	width: 25px;
+	height: 75px;
+	padding: 5px;
+	border: 1px solid pink;
+	cursor: pointer;
+	position: fixed;
+	right: 10px;
+	bottom: 50px;
+	display: none;
+}
+.toTop:hover{
+	color: green;
 }

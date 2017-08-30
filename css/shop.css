@@ -814,3 +814,18 @@ address{
 address span,address a{
 	margin: 0 10px;
 }
+/*回顶部*/
+.toTop{
+	width: 25px;
+	height: 75px;
+	padding: 5px;
+	border: 1px solid pink;
+	cursor: pointer;
+	position: fixed;
+	right: 10px;
+	bottom: 50px;
+	display: none;
+}
+.toTop:hover{
+	color: green;
+}

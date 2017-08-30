@@ -21,8 +21,6 @@ function iptFun(str){
 	}
 }
 
-
-
 // 大地区的悬浮，出现小区域
 $(".aeraList").hover(function(){
 	$(".showList").show();
@@ -82,4 +80,18 @@ $("#iptAeraSear").on("blur",function(e){
 		$(this).val(str);
 	}
 	e.preventDefault();
+});
+
+//搜索插件
+var suggest = new Suggest($(".trySear"),['电脑','清灰','系统'],['a','as','asd','asdf','电','电脑']);
+suggest.show();
+
+// 回顶部
+$(document).on("click",".toTop",function(){
+	// 只能是window
+	$("body").scrollTop(0);
+});
+$(window).on("scroll",function(){
+	// 用document或者window
+	$("body").scrollTop()>300 ? $(".toTop").fadeIn(2000) : $(".toTop").fadeOut(2000); 
 });

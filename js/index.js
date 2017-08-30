@@ -1,15 +1,46 @@
 // 轮播图
-var t = 1;//全局变量
-var timer = setInterval(function(){
-	if(t > 4){
-		t = 1;
+var timer = null;
+var num = 0;//记录轮播图
+var cir = 1;//记录圆点
+timer = setInterval(function(){
+	// console.log(num);
+	if(num > 4){
+		num = 1;//此时的num=1!!如果=0,显示有问题
+		$(".imgDiv").css({
+			'left' : '0px',
+		});
 	}
-	
-	$(".banner img").attr({
-		"src": "img/" + t + ".jpg"
+	if(cir > 4){
+		cir = 1;
+	}
+	$(".imgDiv").animate({
+		'left' : -num*1200 + 'px',
+	},1500,"linear");
+	$(".imgCir span").css({
+		"backgroundColor" : "rgba(89,89,89,0.5)"
 	});
-	t++;
-},2000);
+	
+	// console.log("mm",num);
+	$(".imgCir .imgCir"+(cir)).css({
+		"backgroundColor" : "#000"
+	});
+	num ++;
+	cir ++;
+},3000);  
+
+// 轮播图
+// var t = 1;//全局变量
+// var timer = setInterval(function(){
+// 	if(t > 4){
+// 		t = 1;
+// 	}
+	
+// 	$(".banner img").attr({
+// 		"src": "img/" + t + ".jpg"
+// 	});
+// 	t++;
+// },2000);
+
 //banner中悬停的动画
 // 列表1
 $(".banner .list li:first-child a").mouseover(function(){
@@ -112,6 +143,15 @@ $.ajax({
 		objArr = res.shop_data;
 		// setData(res.shop_data);
 		
+		// 传送数据 一定要将对象先转成字符串
+		var objArrStr = JSON.stringify(objArr);
+		// console.log(objArrStr);
+		localStorage.setItem('shopData',objArrStr);
+		localStorage.getItem('shopData');
+		// var GetData = localStorage.getItem('shopData');
+		// console.log(JSON.parse(GetData)[0]);
+
+
 		// 地图mark;
 		var map = new AMap.Map('mapCont',{
 			zoom: 10,
@@ -126,8 +166,14 @@ $.ajax({
 		for (var m = 0; m < objArr.length; m++) {
 		    var marker = new AMap.Marker({
 	   	 		position: [objArr[m].map_longitude, objArr[m].map_latitude],//marker所在的位置
-	    		map:map//,创建时直接赋予map属性
+	    		map:map,//,创建时直接赋予map属性
 	    		// title:objArr[m].shop_name
+	    		icon: new AMap.Icon({            
+		            size: new AMap.Size(40, 50),  //图标大小
+		            image: "http://webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png",
+		            // 需要自己找坐标！！
+		            imageOffset: new AMap.Pixel(0, -60)
+		        })  
 			});
 			function mapFun(marker){
 				var infowindow = new AMap.InfoWindow({
@@ -218,15 +264,35 @@ function initData(start,length){
 // 地图
 // 全局变量
 // 在js文件中设置padding值
-var heightPad = $(document).height()-$(".mapShop").height()*2-50;
+console.log($(window).height());//可视窗口的高
+console.log($(document).height());//文档的总共高度，总的！
+console.log($("body").scrollTop());//滚动条滚动的高，滚动的
+
+// var heightPad = $(document).height()-$(".mapShop").height()*2-50;
 $(".map a").on("click",function(){
+	// $(".mapMap").css({
+	// 	"height" : $(window).height(),
+	// 	"width" : $(window).width()
+	// });
+	// $(".mapMap").height();
+	$(".mapShop").css({
+		"top" : $("body").scrollTop()
+	});
 	$(".mapSear").show();
-	$(".mapSear").css("paddingTop",heightPad);
+	// $(".mapSear").css("paddingTop",heightPad);
 
 });
 $(".mapName button").on("click",function(){
 	$(".mapSear").hide();
 });
 
-
+//回顶部
+$(document).on("click",".toTop",function(){
+	// 只能是window
+	$("body").scrollTop(0);
+});
+$(document).on("scroll",function(){
+//用document或者window
+	$("body").scrollTop()>300 ? $(".toTop").fadeIn(2000) : $(".toTop").fadeOut(2000);
+});
 

@@ -71,7 +71,7 @@ $("#iptSear").on("keyup",function(){//???
 // 	console.log($(this).text());
 // 	// $("#iptSear").val($(this).text());
 // });//???
-全局变量
+//全局变量
 var flag = true;
 $("#span000").on("click",function(){
 	$(".iptSear1").toggle();
@@ -124,11 +124,28 @@ $.ajax({
 		objArr = res.product;
 		initData();
 
+		// 地图
+		// 接收主页面的数据
+		var shopArr = JSON.parse(localStorage.getItem('shopData'))[0];
+		// console.log(shopArr);
+		var map = new AMap.Map('shopMap',{
+			// 注意要以店铺的位置为中心
+			zoom: 20,
+	    	center:[shopArr.map_longitude,shopArr.map_latitude]
+		});
+		var marker = new AMap.Marker({
+   	 		position: [shopArr.map_longitude, shopArr.map_latitude],//marker所在的位置
+    		map:map,//,创建时直接赋予map属性
+    		title:shopArr.shop_name,
+    		icon: new AMap.Icon({            
+	            size: new AMap.Size(40, 50),  //图标大小
+	            image: "http://webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png",
+	            // 需要自己找坐标！！
+	            imageOffset: new AMap.Pixel(0, -70)
+	        })  
+		});
+		
 
-
-		// function setData(){
-
-		// }
 	}
 });
 function initData(){
@@ -156,3 +173,12 @@ function initData(){
 	}
 	$(".goodsList").empty().append(str);
 }
+// 回顶部
+$(document).on("click",".toTop",function(){
+	// 只能是window
+	$("body").scrollTop(0);
+});
+$(document).on("scroll",function(){
+	// document或者window都可以
+	$("body").scrollTop() > 300 ? $(".toTop").fadeIn(2000) : $(".toTop").fadeOut(2000);
+});

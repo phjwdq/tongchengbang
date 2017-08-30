@@ -1,0 +1,84 @@
+/*全局样式*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-size: 12px;
+	font-family: Microsoft Yahei,'微软雅黑';
+}
+ul,li,ol{
+	list-style: none;
+}
+input,a{
+	outline: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+.clear{
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+/*搜索样式修饰*/
+.searDad{
+	width: 250px;
+	height: 30px;
+	position: relative;
+}
+.searDad .sear{
+	width: 250px;
+	height: 30px;
+	position: relative;
+}
+.searDad .sear #ipt{
+	width: 200px;
+	height: 30px;
+	color: #666666;
+}
+.searDad .sear #btn{
+	width: 50px;
+	height: 30px;
+	color: #fff;
+	border:none;
+	background: blue;
+}
+.searDad .sear .imgSp{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/1.png) no-repeat;
+	position: absolute;
+	top: 5px;
+	left: 180px;
+}
+/*固定列表和不定列表*/
+.searDad .arrList,.searDad .regList{
+	width: 200px;
+	border: 1px solid green;
+	position: absolute;
+	top: 32px;
+	left: 0;
+	display: none;
+}
+/*.searDad .arrList{
+	display: none;
+
+}*/
+.searDad .arrList ul,.searDad .regList ul{
+	width: 200px;
+}
+.searDad .arrList ul li,.searDad .regList ul li{
+	width: 200px;
+	line-height: 24px;
+}
+.searDad .arrList ul li:hover,.searDad .regList ul li:hover{
+	background: yellow;
+}
